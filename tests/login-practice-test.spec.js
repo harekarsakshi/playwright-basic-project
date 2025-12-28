@@ -56,7 +56,7 @@ test.describe("SauceDemo Login & Cart Suite", () => {
     await expect(page).toHaveURL("https://www.saucedemo.com/");
   });
 
-  test.only("Verify add to cart functionality", async ({ page }) => {
+  test("Verify add to cart functionality", async ({ page }) => {
     await login(page);
     await page.getByRole("button", { name: "Add to cart" }).first().click();
     // Wait for cart badge to appear
